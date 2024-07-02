@@ -26,7 +26,7 @@ public class CreateOrderTest extends AbstractBeforeTest {
     @DisplayName("Создание заказа с ингредиентами")
     @Description("С авторизацией")
     public void createOrderWithAuthorization() {
-        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         accessToken = LogIn.checkRequestAuthLogin(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME)).then().extract().path("accessToken");
         Ingredients ingredients = OrderUser.getIngredientFromAPI();
         ingredient = new ArrayList<>();
@@ -43,7 +43,7 @@ public class CreateOrderTest extends AbstractBeforeTest {
     @DisplayName("Создание заказа без ингредиентов")
     @Description("С авторизацией")
     public void createOrderWithAuthorizationWithoutIngredients() {
-        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         accessToken = LogIn.checkRequestAuthLogin(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME)).then().extract().path("accessToken");
         Response response = OrderUser.createOrderWithAuthorizationWithoutIngredients(accessToken);
         response.then().assertThat().statusCode(400).and().body("success", is(false))
@@ -90,7 +90,7 @@ public class CreateOrderTest extends AbstractBeforeTest {
     @DisplayName("Создание заказа c неверным хешем ингредиентов")
     @Description("С авторизацией")
     public void createOrderWithAuthorizationWithWrongHash() {
-        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         accessToken = LogIn.checkRequestAuthLogin(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME)).then().extract().path("accessToken");
         ingredient = new ArrayList<>();
         for (int i=1; i<=4; i++){

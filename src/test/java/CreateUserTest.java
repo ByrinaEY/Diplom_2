@@ -21,9 +21,9 @@ public class CreateUserTest extends AbstractBeforeTest {
     @DisplayName("Создание дубля пользователя")
     @Description("Проверка, если создать пользователя с логином, который уже есть, возвращается ошибка")
     public void createDuplicateUser() {
-        Response createUser1 = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
-        Response createUser2 = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
-        createUser2.then().assertThat().statusCode(403).and().body("success", is(false));
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+        createUser.then().assertThat().statusCode(403).and().body("success", is(false));
     }
     @Test
     @DisplayName("Создание пользователя без заполнения одного из обязательных полей")

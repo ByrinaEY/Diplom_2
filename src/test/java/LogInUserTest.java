@@ -3,7 +3,6 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.example.LogIn;
 import org.example.User;
-import org.hamcrest.Matchers;
 import org.junit.After;
 import org.junit.Test;
 
@@ -14,16 +13,16 @@ public class LogInUserTest extends AbstractBeforeTest {
     @Test
     @DisplayName("авторизация пользователя")
     @Description("логин под существующим пользователем")
-    public void checkAutorization() {
-        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+    public void checkAuthorization() {
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         Response loginUser = LogIn.checkRequestAuthLogin(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         loginUser.then().assertThat().statusCode(200).and().body("success", is(true));
     }
     @Test
     @DisplayName("авторизация пользователя")
     @Description("логин c неверным логином")
-    public void autorizationIncorrectLogin() {
-        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+    public void authorizationIncorrectLogin() {
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         Response loginUser = LogIn.checkRequestAuthLogin(new User("email@emal.ru", LogIn.PASSWORD, LogIn.NAME));
         loginUser.then().assertThat().statusCode(401).and().body("success", is(false));
     }
@@ -31,8 +30,8 @@ public class LogInUserTest extends AbstractBeforeTest {
     @Test
     @DisplayName("авторизация пользователя")
     @Description("логин c неверным паролем")
-    public void autorizationIncorrectPassword() {
-        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+    public void authorizationIncorrectPassword() {
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         Response loginUser = LogIn.checkRequestAuthLogin(new User(LogIn.EMAIL, "incorrectPassword", LogIn.NAME));
         loginUser.then().assertThat().statusCode(401).and().body("success", is(false));
     }

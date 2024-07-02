@@ -51,7 +51,7 @@ public class EditDataUserTest extends AbstractBeforeTest{
     @DisplayName("Изменение данных пользователя")
     @Description("Без авторизации, изменение пароля")
     public void changePasswordNotAuthUser() {
-        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         Response newUser = LogIn.changeDataUser("", new User(LogIn.EMAIL, LogIn.PASSWORD_NEW, LogIn.NAME));
         newUser.then().assertThat().statusCode(401).and().body("message", is("You should be authorised"));
     }
@@ -60,7 +60,7 @@ public class EditDataUserTest extends AbstractBeforeTest{
     @DisplayName("Изменение данных пользователя")
     @Description("Без авторизации, изменение name")
     public void changeNameNotAuthUser() {
-        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         Response newUser = LogIn.changeDataUser("", new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME_NEW));
         newUser.then().assertThat().statusCode(401).and().body("message", is("You should be authorised"));
     }

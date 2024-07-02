@@ -18,7 +18,7 @@ public class GetOrderUserTest extends AbstractBeforeTest {
     @DisplayName("Получение заказов конкретного пользователя")
     @Description("С авторизацией")
     public void getOrderListWithAuthorization() {
-        Response createUser = LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
+        LogIn.getPostRequestCreateUser(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME));
         accessToken = LogIn.checkRequestAuthLogin(new User(LogIn.EMAIL, LogIn.PASSWORD, LogIn.NAME)).then().extract().path("accessToken");
         Response response = OrderUser.getOrderListWithAuthorization(accessToken);
         response.then().assertThat().statusCode(200).and().body("success", is(true))
