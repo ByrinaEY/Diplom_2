@@ -4,20 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec6fad35-cb92-4890-8d9f-6ebbdc99791b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="ec6fad35-cb92-4890-8d9f-6ebbdc99791b" name="Changes" comment="API Test is created">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreateOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateOrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EditDataUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EditDataUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GetOrderUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetOrderUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LogInUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LogInUserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2i12no5D95bz6nXKJuhCCzrJPbc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -26,12 +48,115 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CreateOrderTest.createOrderWithAuthorization.executor": "Run",
+    "JUnit.CreateOrderTest.createOrderWithAuthorizationWithWrongHash.executor": "Run",
+    "JUnit.CreateOrderTest.createOrderWithAuthorizationWithoutIngredients.executor": "Run",
+    "JUnit.CreateOrderTest.createOrderWithoutAuthorization.executor": "Run",
+    "JUnit.CreateOrderTest.createOrderWithoutAuthorizationWithWrongHash.executor": "Run",
+    "JUnit.CreateOrderTest.createOrderWithoutAuthorizationWithoutIngredients.executor": "Run",
+    "JUnit.CreateUserTest.checkEmptyEmailField.executor": "Run",
+    "JUnit.CreateUserTest.checkEmptyNameField.executor": "Run",
+    "JUnit.CreateUserTest.checkEmptyPasswordField.executor": "Run",
+    "JUnit.CreateUserTest.createDuplicateUser.executor": "Run",
+    "JUnit.CreateUserTest.executor": "Run",
+    "JUnit.EditDataUserTest.changeEmailNotAuthUser.executor": "Run",
+    "JUnit.EditDataUserTest.changeNameAuthUser.executor": "Run",
+    "JUnit.EditDataUserTest.changeNameNotAuthUser.executor": "Run",
+    "JUnit.EditDataUserTest.changePasswordAuthUser.executor": "Run",
+    "JUnit.EditDataUserTest.changePasswordNotAuthUser.executor": "Run",
+    "JUnit.EditDataUserTest.checkAutorization.executor": "Run",
+    "JUnit.GetOrderUserTest.getOrderListWithAuthorization.executor": "Run",
+    "JUnit.GetOrderUserTest.getOrderListWithoutAuthorization.executor": "Run",
+    "JUnit.LogInUserTest.autorizationIncorrectLogin.executor": "Run",
+    "JUnit.LogInUserTest.autorizationIncorrectPassword.executor": "Run",
+    "JUnit.LogInUserTest.checkAutorization.executor": "Run",
+    "Maven.Diplom_2 [allure:serve].executor": "Run",
+    "Maven.Diplom_2 [clean,test].executor": "Run",
+    "Maven.Sprint_7 [allure:serve].executor": "Run",
+    "Maven.Sprint_7 [clean,test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "develop2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Diplom/Diplom_2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean test" />
+      <command value="mvn allure:serve" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.GetOrderUserTest.getOrderListWithAuthorization">
+    <configuration name="CreateOrderTest.createOrderWithAuthorizationWithWrongHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CreateOrderTest" />
+      <option name="METHOD_NAME" value="createOrderWithAuthorizationWithWrongHash" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateOrderTest.createOrderWithoutAuthorizationWithWrongHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CreateOrderTest" />
+      <option name="METHOD_NAME" value="createOrderWithoutAuthorizationWithWrongHash" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateOrderTest.createOrderWithoutAuthorizationWithoutIngredients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CreateOrderTest" />
+      <option name="METHOD_NAME" value="createOrderWithoutAuthorizationWithoutIngredients" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetOrderUserTest.getOrderListWithAuthorization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GetOrderUserTest" />
+      <option name="METHOD_NAME" value="getOrderListWithAuthorization" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetOrderUserTest.getOrderListWithoutAuthorization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GetOrderUserTest" />
+      <option name="METHOD_NAME" value="getOrderListWithoutAuthorization" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GetOrderUserTest.getOrderListWithAuthorization" />
+        <item itemvalue="JUnit.GetOrderUserTest.getOrderListWithoutAuthorization" />
+        <item itemvalue="JUnit.CreateOrderTest.createOrderWithAuthorizationWithWrongHash" />
+        <item itemvalue="JUnit.CreateOrderTest.createOrderWithoutAuthorizationWithWrongHash" />
+        <item itemvalue="JUnit.CreateOrderTest.createOrderWithoutAuthorizationWithoutIngredients" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -41,6 +166,42 @@
       <option name="presentableId" value="Default" />
       <updated>1718643933955</updated>
     </task>
+    <task id="LOCAL-00001" summary="API Test is created">
+      <option name="closed" value="true" />
+      <created>1718816354701</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718816354701</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="API Test is created" />
+    <option name="LAST_COMMIT_MESSAGE" value="API Test is created" />
   </component>
 </project>
